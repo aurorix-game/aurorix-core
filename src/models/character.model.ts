@@ -16,15 +16,6 @@ export namespace Character {
     ELEMENT_TUNNING_GRASS = 'element-tunning-grass',
   }
 
-  export enum TypeAttributesLabel {
-    MOPY_CAPTURE = 'Mopy Capture',
-    EXPERTISE = 'Expertise',
-    ELEMENT_TUNNING_FIRE = 'Element Tunning - Fire',
-    ELEMENT_TUNNING_WATER = 'Element Tunning - Water',
-    ELEMENT_TUNNING_SHADOW = 'Element Tunning - Shadow',
-    ELEMENT_TUNNING_GRASS = 'Element Tunning - Grass',
-  }
-
   export type AttributeStyle = {
     color: string;
     icon: string;
@@ -44,3 +35,12 @@ export namespace Character {
     attributes: Attribute[];
   };
 }
+
+export const CHARACTER_ATTRIBUTES_LABEL = {
+  [Character.TypeAttributes.MOPY_CAPTURE]: 'Mopy Capture',
+  [Character.TypeAttributes.EXPERTISE]: 'Expertise',
+  [Character.TypeAttributes.ELEMENT_TUNNING_FIRE]: 'Element Tunning - Fire',
+  [Character.TypeAttributes.ELEMENT_TUNNING_WATER]: 'Element Tunning - Water',
+  [Character.TypeAttributes.ELEMENT_TUNNING_SHADOW]: 'Element Tunning - Shadow',
+  [Character.TypeAttributes.ELEMENT_TUNNING_GRASS]: 'Element Tunning - Grass',
+};
