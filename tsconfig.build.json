@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules/**/*",
+    ".vscode/**/*",
+    "webpack.config.js",
+    "**/*.spec.ts",
+    "src/__mocks__/",
+    "dist",
+    "__tests__",
+    ".circleci"
+  ]
+}
