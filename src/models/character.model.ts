@@ -31,7 +31,6 @@ export namespace Character {
   };
 
   export type Attribute = {
-    label: string;
     type: TypeAttributes;
     type_value: TypeValues;
     value: number;
