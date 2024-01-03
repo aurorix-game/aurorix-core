@@ -1,3 +1,4 @@
+import { Elements } from './elements.model';
 import { TypeValues } from './type-values.model';
 
 export namespace Mopy {
@@ -31,5 +32,11 @@ export namespace Mopy {
     alias_name: string;
     sprite: Sprite;
     attributes: Attribute[];
+  };
+
+  export type Ability = {
+    name: string;
+    element: Elements;
+    pp: number;
   };
 }
