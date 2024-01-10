@@ -16,18 +16,6 @@ export namespace Character {
     ELEMENT_TUNNING_GRASS = 'element-tunning-grass',
   }
 
-  export type AttributeStyle = {
-    color: string;
-    icon: string;
-  };
-
-  export type Attribute = {
-    type: TypeAttributes;
-    type_value: TypeValues;
-    value: number;
-    style: AttributeStyle;
-  };
-
   export type MopyCaptureAttribute = {
     type: TypeAttributes;
     value: number;
