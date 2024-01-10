@@ -28,19 +28,32 @@ export namespace Character {
     style: AttributeStyle;
   };
 
+  export type MopyCaptureAttribute = {
+    type: TypeAttributes;
+    value: number;
+    type_value: TypeValues;
+  };
+
+  export type ExpertiseAttribute = {
+    type: TypeAttributes;
+    value: number;
+    type_value: TypeValues;
+  };
+
+  export type ElementTunningAttribute = {
+    type: TypeAttributes;
+    value: number;
+    type_value: TypeValues;
+  };
+
   export type Model = {
     id: string;
     alias_name: string;
     sprite: Sprite;
-    attributes: Attribute[];
+    att: {
+      mopy_capture: MopyCaptureAttribute;
+      expertise: MopyCaptureAttribute;
+    };
+    element_tunning: ElementTunningAttribute[];
   };
 }
-
-export const CHARACTER_ATTRIBUTES_LABEL = {
-  [Character.TypeAttributes.MOPY_CAPTURE]: 'Mopy Capture',
-  [Character.TypeAttributes.EXPERTISE]: 'Expertise',
-  [Character.TypeAttributes.ELEMENT_TUNNING_FIRE]: 'Element Tunning - Fire',
-  [Character.TypeAttributes.ELEMENT_TUNNING_WATER]: 'Element Tunning - Water',
-  [Character.TypeAttributes.ELEMENT_TUNNING_SHADOW]: 'Element Tunning - Shadow',
-  [Character.TypeAttributes.ELEMENT_TUNNING_GRASS]: 'Element Tunning - Grass',
-};

@@ -8,24 +8,6 @@ export namespace Mopy {
     rows: number;
   };
 
-  export enum TypeAttributes {
-    HP = 'hp',
-    ATTACK = 'attack',
-    DEFENSE = 'defense',
-    ELEMENT = 'element',
-    EXP = 'exp',
-  }
-
-  export type AttributeStyle = {
-    color: string;
-  };
-
-  export type Attribute = {
-    type: TypeAttributes;
-    type_value: TypeValues;
-    value: number;
-  };
-
   export type LevelAttribute = {
     value: number;
     type_value: TypeValues;
