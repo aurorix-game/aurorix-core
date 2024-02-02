@@ -21,11 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Print Token
-        run: echo "${{ secrets.GITHUB_TOKEN }}"
-
       - name: Login to GitHub Packages
         run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+
+      - name: Print Token
+        run: cat .npmrc
 
       - name: Set registry for GitHub Packages
         run: echo "@OWNER:registry=https://npm.pkg.github.com" >> ~/.npmrc
