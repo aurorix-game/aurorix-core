@@ -1,5 +1,5 @@
 {
-  "name": "aurorix-core",
+  "name": "@aurorix-game/aurorix-core",
   "version": "1.0.0",
   "engines": {
     "node": ">=16.0.0"
@@ -55,5 +55,8 @@
     "type": "git",
     "url": "git+https://github.com/aurorix-game/aurorix-core.git"
   },
-  "description": "The core logic for Aurorix Game"
+  "description": "The core logic for Aurorix Game",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
