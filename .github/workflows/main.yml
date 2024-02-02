@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Login no GitHub Packages
-        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.TOKEN_CI }}" > ~/.npmrc
 
       - name: Publicar no GitHub Packages
         run: npm publish --access public
