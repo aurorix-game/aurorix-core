@@ -1,4 +1,4 @@
-name: Publicar no GitHub Packages
+name: Publish Package
 
 on:
   push:
@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: Checkout Branch
         uses: actions/checkout@v2
 
-      - name: Configurar Node.js
+      - name: Setting version Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "14"
+          node-version: "16.15.0"
 
-      - name: Instalar dependências
+      - name: Install dependencies
         run: npm install
 
-      - name: Login no GitHub Packages
-        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.TOKEN_CI }}" > ~/.npmrc
+      - name: Login GitHub Packages
+        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
-      - name: Publicar no GitHub Packages
+      - name: Publish Package
         run: npm publish --access public
